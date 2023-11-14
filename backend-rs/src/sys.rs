@@ -1,6 +1,6 @@
 use usdpl_back::api::files::*;
 
-const HWMON_INDEX: usize = 5;
+const HWMON_INDEX: usize = 4;
 
 pub fn read_fan() -> Option<u64> {
     read_single(format!("/sys/class/hwmon/hwmon{}/fan1_input", HWMON_INDEX)).ok()
